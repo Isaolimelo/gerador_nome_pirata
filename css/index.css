@@ -1,0 +1,468 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    border: 0;
+    list-style: none;
+    font-family: 'Oswald', sans-serif;
+    box-sizing: border-box;
+    /* font-family: 'Homemade Apple', cursive; */
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #65888C;
+    /* position: absolute; */
+}
+
+strong{
+    font-weight: bolder;
+    color: #a8002d;
+}
+
+#container{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+    background-color: #F2AF5C;
+    border: 2px dashed #D94E73;
+    border-radius: 15px 100px 20px 0;
+    text-align: center;
+    /* overflow: hidden; */
+    box-shadow: 10px 10px #1f0f0030;
+    animation: pulse 1s alternate;
+}
+
+#container h1{
+    letter-spacing: .8px;
+    color: #1f0f00;
+    font-size: 38px;
+    margin-top: 30px;
+}
+
+#container img{
+    width: 100px;
+    margin-top: 20px;
+    animation: pulse 1s alternate;
+    animation-delay: 1.2s;
+}
+
+#container img:hover{
+    animation: heartBeat 3s ease;
+}
+
+/* --------------------------------- */
+
+#selectors{
+    display: flex;
+    justify-content: center;
+    /* border: 5px solid red; */
+}
+
+p{
+    color: #613601;
+    font-size: 20px;
+}
+ul li{
+    display: flex;
+    margin-top: 25px;
+}
+
+ ul #day{
+    margin-top: 200px;
+    /* width: 300px; */
+    max-width: 300px;
+    color: #7a4402;
+    position: relative;
+    cursor: pointer;
+ }
+
+ ul #day li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+ }
+
+ #day #submenuday{
+    width: 100%;
+    opacity: 0;
+    position: absolute;
+    top: -100%;
+    left: 0;
+    background-color: #1f0f0050;
+    border-radius: 1rem;
+    padding: 5px;
+    text-align: center;
+    transition: all .3s ease;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+ #day #submenuday li{
+    color: bisque;
+    padding: 1rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: background .2s ease}
+
+ #month #submenumonth li:nth-child(1):hover{
+    background-color: #D94E73;
+ }
+ #month #submenumonth li:nth-child(2):hover{
+    background-color: #65888C;
+
+ }
+ #month #submenumonth li:nth-child(3):hover{
+    background-color: #F2AF5C;
+
+ }
+ #month #submenumonth li:nth-child(4):hover{
+    background-color: #D99D8F;
+
+ }
+ #month #submenumonth li:nth-child(5):hover{
+    background-color: #F27D72;
+
+ }
+ #month #submenumonth li:nth-child(6):hover{
+    background-color: #D94E73;
+
+ }
+ #month #submenumonth li:nth-child(7):hover{
+    background-color: #65888C;
+
+ }
+ #month #submenumonth li:nth-child(8):hover{
+    background-color: #F2AF5C;
+
+ }
+ #month #submenumonth li:nth-child(9):hover{
+    background-color: #D99D8F;
+
+ }
+ #month #submenumonth li:nth-child(10):hover{
+    background-color: #D94E73;
+
+ }
+ #month #submenumonth li:nth-child(11):hover{
+    background-color: #65888C;
+
+ }
+ #month #submenumonth li:nth-child(12):hover{
+    background-color: #F2AF5C;
+
+ }
+
+#day img{
+    width: 14px;
+    height: 14px;
+    margin-left: 10px;
+    transform: transform .2s ease;
+}
+
+#day:hover img{
+    transform: rotate(180deg);
+}
+
+#day:hover #submenuday{
+    top: 20%;
+    opacity: 1;
+    pointer-events: all;
+
+}
+
+#day{
+    position: relative;
+    width: 400px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* onde se mexe no tamanho do submenu */
+}
+
+#submenuday{
+    opacity: 0;
+    /* pointer-events: none; */
+    position: absolute;
+    /* top: 500%; */
+    left: 0;
+}
+
+#day:hover #submenuday{
+    top: -400%;
+    opacity: 1;
+    pointer-events: all;
+}
+
+
+/* ----------------------------- */
+
+ ul #month{
+    margin-top: 200px;
+    width: 100%;
+    max-width: 300px;
+    color: #1f0f00;
+    position: relative;
+    cursor: pointer;
+ }
+
+ ul #month li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+ }
+
+ #month #submenumonth{
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    background-color: #1f0f0050;
+    border-radius: 1rem;
+    padding: 1rem;
+    text-align: center;
+    transition: all .3s ease;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+ #month #submenumonth li{
+    color: bisque;
+    padding: 1rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: background .2s ease;
+ }
+
+ #day #submenuday li:nth-child(1):hover{
+    background-color: #D94E73;
+ }
+ #day #submenuday li:nth-child(2):hover{
+    background-color: #65888C;
+
+ }
+ #day #submenuday li:nth-child(3):hover{
+    background-color: #F2AF5C;
+
+ }
+ #day #submenuday li:nth-child(4):hover{
+    background-color: #D99D8F;
+
+ }
+ #day #submenuday li:nth-child(5):hover{
+    background-color: #F27D72;
+
+ }
+ #day #submenuday li:nth-child(6):hover{
+    background-color: #D94E73;
+
+ }
+ #day #submenuday li:nth-child(7):hover{
+    background-color: #65888C;
+
+ }
+ #day #submenuday li:nth-child(8):hover{
+    background-color: #F2AF5C;
+
+ }
+ #day #submenuday li:nth-child(9):hover{
+    background-color: #D99D8F;
+
+ }
+ #day #submenuday li:nth-child(10):hover{
+    background-color: #D94E73;
+
+ }
+ #day #submenuday li:nth-child(11):hover{
+    background-color: #65888C;
+
+ }
+ #day #submenuday li:nth-child(12):hover{
+    background-color: #F2AF5C;
+
+ }
+ #day #submenuday li:nth-child(13):hover{
+    background-color: #D94E73;
+
+ }
+ #day #submenuday li:nth-child(14):hover{
+    background-color: #D99D8F;
+
+ }
+ #day #submenuday li:nth-child(15):hover{
+    background-color: #65888C;
+
+ }
+ #day #submenuday li:nth-child(16):hover{
+    background-color: #F2AF5C;
+
+ }
+ #day #submenuday li:nth-child(17):hover{
+    background-color: #D94E73;
+
+ }
+ #day #submenuday li:nth-child(17):hover{
+    background-color: #D99D8F;
+
+ }
+ #day #submenuday li:nth-child(18):hover{
+    background-color: #65888C;
+
+ }
+ #day #submenuday li:nth-child(20):hover{
+    background-color: #F2AF5C;
+
+ }
+ #day #submenuday li:nth-child(21):hover{
+    background-color: #D94E73;
+
+ }
+ #day #submenuday li:nth-child(22):hover{
+    background-color: #D99D8F;
+
+ }
+ #day #submenuday li:nth-child(23):hover{
+    background-color: #65888C;
+
+ }
+ #day #submenuday li:nth-child(24):hover{
+    background-color: #F2AF5C;
+
+ }
+ #day #submenuday li:nth-child(25):hover{
+    background-color: #D94E73;
+
+ }
+ #day #submenuday li:nth-child(26):hover{
+    background-color: #D99D8F;
+
+ }
+ #day #submenuday li:nth-child(27):hover{
+    background-color: #65888C;
+
+ }
+ #day #submenuday li:nth-child(28):hover{
+    background-color: #F2AF5C;
+
+ }
+ #day #submenuday li:nth-child(29):hover{
+    background-color: #D94E73;
+
+ }
+ #day #submenuday li:nth-child(30):hover{
+    background-color: #D99D8F;
+
+ }
+ #day #submenuday li:nth-child(31):hover{
+    background-color: #65888C;
+
+ }
+
+#month img{
+    width: 14px;
+    height: 14px;
+    margin-left: 10px;
+    transform: transform .2s ease;
+}
+
+#month:hover img{
+    transform: rotate(180deg);
+}
+
+#month:hover #submenumonth{
+    opacity: 1;
+    pointer-events: all;
+
+}
+
+#month{
+    position: relative;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#submenumonth{
+    opacity: 0;
+    /* pointer-events: none; */
+    position: absolute;
+    /* top: -50%; */
+    left: 0;
+}
+
+#month:hover #submenumonth{
+    top: -280%;
+    opacity: 1;
+    pointer-events: all;
+}
+
+
+#divanswer{
+    margin-top: 40px;
+    border-radius: 15px 15px 5px 5px;
+    padding: 5px 35px;
+    background-color: #fdfdaa;
+    box-shadow: 10px 10px #1f0f0030;
+}
+#divanswer h5{
+    font-family: 'Homemade Apple', cursive;
+    margin-top: 5px;
+}
+
+#divanswer p{
+    font-family: 'Homemade Apple', cursive;
+    font-size: 30px;
+    color: #010157;
+}
+
+#coin1{
+    width: 250px;
+    position: relative;
+    left: 15%;
+    top: -200px;
+    /* bottom: 8px; */
+    animation: swing 3s infinite ;
+    transform: rotate(-180deg);
+}
+#coin2{
+    width: 250px;
+    position: relative;
+    left: 859px;
+    /* top: 0px; */
+    bottom: 28px;
+    animation: swing 3s infinite linear;
+    transform: rotate(180deg);
+}
+
+button{
+    width: 70px;
+    height: 70px;
+    background-color: #65888C;
+    border-radius: 50px;
+    padding: 40px;
+    color: #fdfdaa;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 406px;
+    top: -35px;
+}
+
+button:hover{
+    background-color: #1f0f00;
+    transition: .8s ease;
+    animation: swing 1s;
+}
+
+
